@@ -1,10 +1,12 @@
 from machine import Pin
 import time
 
+flash = 4
+red_led = 33
 
 def blink_once(pin_no, times, ms_on, ms_off):
 
-    if pin_no == 33 :
+    if pin_no == red_led :
         ON = 0
         OFF = 1
     else :
