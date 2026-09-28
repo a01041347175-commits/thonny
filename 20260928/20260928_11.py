@@ -26,12 +26,12 @@ def run_pattern(pin_obj, pattern_list):
     else:
         ON = 1
         OFF = 0
-        
+    pattern_list.append(1000)
     for ms in pattern_list:
         pin_obj.value(ON)
         time.sleep_ms(ms)
         pin_obj.value(OFF)
         time.sleep_ms(ms)
         
-run_pattern(red, slow)
+run_pattern(flash, slow)
 run_pattern(red, fast)
