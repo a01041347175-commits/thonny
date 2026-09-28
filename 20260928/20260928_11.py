@@ -20,11 +20,18 @@ for ms in fast:
     time.sleep_ms(200)
     
 def run_pattern(pin_obj, pattern_list):
+    if pin_obj == red:
+        ON = 0
+        OFF = 1
+    else:
+        ON = 1
+        OFF = 0
+        
     for ms in pattern_list:
-        pin_obj.value(1)
+        pin_obj.value(ON)
         time.sleep_ms(ms)
-        pin_obj.value(0)
+        pin_obj.value(OFF)
         time.sleep_ms(ms)
         
-run_pattern(flash, slow)
-run_pattern(flash, fast)
+run_pattern(red, slow)
+run_pattern(red, fast)
