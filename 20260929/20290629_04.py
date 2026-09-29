@@ -4,7 +4,9 @@ import time
 flash = Pin(4, Pin.OUT, value=0)
 
 UNIT = 150
-SOS = [1, 1, 1, 3, 3, 3, 1, 1, 1]
+SOS = [1, 1, 1, #S
+       3, 3, 3, #O
+       1, 1, 1] #S
 
 def send_morse(pin_obj, signals, unit):
     for s in signals:
