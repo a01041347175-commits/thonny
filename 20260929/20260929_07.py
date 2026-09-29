@@ -1,0 +1,13 @@
+from machine import Pin
+import time
+
+heart = [100, 100, 600]
+sos = [150, 150, 150, 450, 450, 450, 150, 150, 150]
+speedup = [600, 500, 400, 300, 200, 100]
+
+playlist = [heart, sos, speedup]
+
+print(len(playlist))
+print(playlist[1])
+print(playlist[1][2])
+print(sum(heart))
