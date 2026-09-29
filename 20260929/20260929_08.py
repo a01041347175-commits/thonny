@@ -19,5 +19,5 @@ def make_speedup(count, start, step):
         result.append(start - i*step)
     return result
 
-pattern = make_speedup(20, 1000, 50)
+pattern = make_speedup(20, 100, 5)
 run_pattern(red, pattern, 0)
