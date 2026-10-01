@@ -19,5 +19,5 @@ def pattern(count, number):
         flash.value(0)
         time.sleep_ms(1000)
 
-pattern(10, 3)
+pattern(9, 3)
 pattern(10, 5)
