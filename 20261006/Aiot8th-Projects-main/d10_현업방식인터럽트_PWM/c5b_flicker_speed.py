@@ -4,7 +4,7 @@ flash = Pin(4, Pin.OUT, value=0)  # 매우 밝다, 직시 금지
 
 PERIODS = [200, 100, 50, 20, 10]  # 한 세트의 길이(ms): 5Hz, 10Hz, 20Hz, 50Hz, 100Hz
 RATIO = 30                        # 켜진 비율(%) — 모든 단계에서 같다
-STAGE_MS = 4000                   # 한 단계를 4초 동안 보여 준다
+STAGE_MS = 2000                   # 한 단계를 4초 동안 보여 준다
 
 time_cnt = 0
 ms_flag = False

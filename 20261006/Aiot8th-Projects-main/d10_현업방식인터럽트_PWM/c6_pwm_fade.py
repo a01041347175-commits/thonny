@@ -3,9 +3,12 @@ from machine import Pin, PWM, Timer
 flash = PWM(Pin(4), freq=1000, duty=0)
 
 duty = 0
-step = 5  # 한 번에 바뀌는 크기
+step = 1  # 한 번에 바뀌는 크기
 time_cnt = 0
 ms_flag = False
+
+max_duty = 200
+min_duty = 80
 
 def timer_callback(t):
     global ms_flag
@@ -14,11 +17,11 @@ def timer_callback(t):
 def timer_10ms():
     global duty, step
     duty += step
-    if duty >= 300:  # 위 끝에 닿으면
-        duty = 300
+    if duty >= max_duty:  # 위 끝에 닿으면
+        duty = max_duty
         step = -step  # 방향을 뒤집는다
-    if duty <= 0:  # 아래 끝에 닿으면
-        duty = 0
+    if duty <= min_duty:  # 아래 끝에 닿으면
+        duty = min_duty
         step = -step
     flash.duty(duty)
 
