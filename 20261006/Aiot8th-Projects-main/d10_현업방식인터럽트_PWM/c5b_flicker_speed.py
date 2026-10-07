@@ -9,6 +9,7 @@ STAGE_MS = 4000                   # 한 단계를 4초 동안 보여 준다
 time_cnt = 0
 ms_flag = False
 stage = -1
+new_stage = 0
 
 def timer_callback(t):
     global ms_flag
